@@ -1,11 +1,11 @@
 <script setup>
-  import Emojis from './components/Emojis.vue';
+import Emojis from './components/Emojis.vue';
 </script>
 
 <template>
   <header>
     <div>
-      <h1>emojis-web-jct</h1>
+      <h1>Emojis-Jct</h1>
     </div>
   </header>
   <nav>
@@ -38,7 +38,7 @@
       <br>
       <div class="div-emoji">
         <div class="dv-emoji">
-          <Emojis/> 
+          <Emojis />
         </div>
       </div>
     </section>

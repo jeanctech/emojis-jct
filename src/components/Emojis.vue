@@ -6,41 +6,36 @@ const showCopied = ref(false)
 const copyEmoji = async (emoji) => {
   try {
     await navigator.clipboard.writeText(emoji)
-    
+
     showCopied.value = true
     setTimeout(() => {
       showCopied.value = false
     }, 2000)
-    
+
   } catch (err) {
     console.log('Error al copiar:', err)
   }
 }
 
 const emojis = ['😀',
-'😃',
-'😄',
-'😁',
-'😆',
-'😅',
-'🤣',
-'😂',
-'🙂',
-'🙃']
+  '😃',
+  '😄',
+  '😁',
+  '😆',
+  '😅',
+  '🤣',
+  '😂',
+  '🙂',
+  '🙃']
 </script>
 
 <template>
   <div>
     <!-- Tus emojis clickeables -->
-    <span 
-      v-for="emoji in emojis" 
-      :key="emoji"
-      @click="copyEmoji(emoji)"
-      class="emoji-item"
-    >
+    <span v-for="emoji in emojis" :key="emoji" @click="copyEmoji(emoji)" class="emoji-item">
       {{ emoji }}
     </span>
-    
+
     <!-- Mensaje de copiado -->
     <div v-if="showCopied" class="toast">
       ✨ ¡Copiado!

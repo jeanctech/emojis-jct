@@ -61,7 +61,7 @@ const emojis = ['😀',
   top: 20px;
   right: 20px;
   background: #4CAF50;
-  color: white;
+  color: #f0f0f0;
   padding: 10px 20px;
   border-radius: 4px;
 }
